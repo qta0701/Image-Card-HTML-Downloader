@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' b:version='2' class='v2'
+    expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml'
+    xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data'
+    xmlns:expr='http://www.google.com/2005/gml/expr'>
+
+<head>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport' />
+    <title>
+        <data:blog.pageTitle />
+    </title>
+
+    <!-- Blogger Default Skin (Minimal) -->
+    <b:skin>
+        <![CDATA[
+      body { margin: 0; padding: 0; font-family: sans-serif; }
+    ]]>
+    </b:skin>
+
+    <!-- Dependencies -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+    <!-- Fallback: html2canvas (Robust, widely supported) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <!-- JSZip for bundling downloads -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #c1c1c1;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #a8a8a8;
+        }
+    </style>
+
+    <!-- React & App Logic Configuration -->
+    <script type="importmap">
+    {
+      "imports": {
+        "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+        "react/": "https://esm.sh/react@^19.2.3/",
+        "react": "https://esm.sh/react@^19.2.3",
+        "@google/genai": "https://esm.sh/@google/genai@^1.33.0"
+      }
+    }
+    </script>
+
+    <!-- Main App Script from Firebase Hosting -->
+    <!-- IMPORTANT: If you redeploy and the hash changes, you MUST update this URL. -->
+    <script type="module" crossorigin="anonymous"
+        src="https://github-web-app-server.web.app/assets/index-gUT3N7Li.js"></script>
+
+</head>
+
+<body class="bg-gray-50 text-slate-900 h-screen overflow-hidden">
+
+    <!-- Required Blogger Section (Hidden or Minimal) -->
+    <b:section class='main' id='main' showaddelement='yes'>
+        <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' visible='false' />
+    </b:section>
+
+    <!-- React App Mount Point -->
+    <div id="root" class="h-full"></div>
+
+</body>
+
+</html>
