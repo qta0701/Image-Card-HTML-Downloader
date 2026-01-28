@@ -1,0 +1,5 @@
+{
+  "name": "이미지카드 HTML코드 -> 이미지 다운로드 앱",
+  "description": "A powerful tool to convert text and code artifacts into high-quality downloadable images using Gemini and HTML5 Canvas.",
+  "requestFramePermissions": []
+}
